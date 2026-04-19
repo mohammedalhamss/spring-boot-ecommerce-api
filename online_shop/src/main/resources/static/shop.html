@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard - Online Shop</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style_shop.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Online Shop</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#" class="nav-link active" data-section="products">Products</a>
+            <a href="#" class="nav-link" data-section="cart">Cart</a>
+            <a href="#" class="nav-link" id="logout-btn">Logout</a>
+        </div>
+
+        <div class="cart-icon">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count" id="cart-count">0</span>
+        </div>
+    </nav>
+</header>
+
+<main class="main-content">
+    <!-- Products Section -->
+    <section id="products" class="content-section active">
+        <div class="section-header">
+            <h2><i class="fas fa-box"></i> Products</h2>
+        </div>
+        <div class="products-grid" id="products-container"></div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart" class="content-section">
+        <div class="section-header">
+            <h2><i class="fas fa-shopping-cart"></i> My Cart</h2>
+            <button class="btn btn-primary" id="checkout-btn">
+                <i class="fas fa-credit-card"></i> Checkout
+            </button>
+        </div>
+        <div class="cart-list" id="cart-container"></div>
+    </section>
+</main>
+
+<!-- Loading Spinner -->
+<div class="loading-spinner" id="loading">
+    <div class="spinner"></div>
+</div>
+
+<!-- JS Modules -->
+<script type="module" src="api.js"></script>
+<script type="module" src="script2.js"></script>
+
+</body>
+</html>
